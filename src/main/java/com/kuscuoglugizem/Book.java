@@ -18,31 +18,37 @@ public abstract class Book {
         this.title = title;
         this.author = author;
         this.publicationYear = publicationYear;
-        this.status = status;
+        this.status = EStatus.AVAILABLE;
     }
 
 
     public String getISBN() {
+
         return ISBN;
     }
 
     public void setISBN(String ISBN) {
+
         this.ISBN = ISBN;
     }
 
     public String getTitle() {
+
         return title;
     }
 
     public void setTitle(String title) {
+
         this.title = title;
     }
 
     public String getAuthor() {
-        return author;
+        return
+                author;
     }
 
     public void setAuthor(String author) {
+
         this.author = author;
     }
 
@@ -51,33 +57,28 @@ public abstract class Book {
     }
 
     public void setPublicationYear(int publicationYear) {
+
         this.publicationYear = publicationYear;
     }
 
     public EStatus getStatus() {
+
         return status;
     }
 
     public void setStatus(EStatus status) {
+
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "ISBN='" + ISBN + '\'' +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", publicationYear=" + publicationYear +
-                ", status=" + status +
-                '}';
-    }
 
     public void borrowBook() {
+
         this.status = EStatus.BORROWED;
     }
-    public void returnBook(){
-        this.status=EStatus.AVAILABLE;
+
+    public void returnBook() {
+        this.status = EStatus.AVAILABLE;
     }
 
     public abstract String bookType();
